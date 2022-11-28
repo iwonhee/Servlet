@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.servlet.annotation.WebFilter"/>
     <fullyQualifiedTypeName name="command.ProductAllCommand"/>
     <fullyQualifiedTypeName name="controller.ProductController"/>
     <fullyQualifiedTypeName name="command.ProductComCommand"/>
     <fullyQualifiedTypeName name="javax.servlet.Filter"/>
+    <fullyQualifiedTypeName name="controller.CustomerController"/>
+    <fullyQualifiedTypeName name="mybatis.HanulFactory"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebFilter"/>
 </qualifiedTypeNameHistroy>

@@ -15,6 +15,24 @@ public class CustomerDAO {
 		sql = factory.openSession(true);
 	}
 	
+	// 선택한 고객정보 삭제(Delete)
+	public void customer_delete(int id) {
+		connect();
+		sql.delete("customer.delete", id);
+	}
+	
+	// 신규 고객정보 입력(Insert)
+	public void customer_insert(CustomerDTO dto) {
+		connect();
+		sql.insert("customer.insert", dto);
+	}
+	
+	// 변경한 고객정보 저장(Update)
+	public void customer_update(CustomerDTO dto) {
+		connect();
+		sql.update("customer.update", dto);
+	}
+	
 	// 선택한 고객정보 조회
 	public CustomerDTO customer_info(int id) {
 		connect();

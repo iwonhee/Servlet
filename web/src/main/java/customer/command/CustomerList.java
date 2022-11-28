@@ -14,6 +14,8 @@ public class CustomerList implements Command {
 		CustomerDAO dao = new CustomerDAO();
 		// 화면에 출력하도록 request에 담기
 		request.setAttribute("list", dao.customer_list());
+		request.getSession().setAttribute("category", "cu");
+		
 	}
 
 }

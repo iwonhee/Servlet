@@ -9,8 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import common.Command;
+import customer.command.CustomerDelete;
 import customer.command.CustomerInfo;
+import customer.command.CustomerInsert;
 import customer.command.CustomerList;
+import customer.command.CustomerUpdate;
 
 @WebServlet("*.cu")
 public class CustomerController extends HttpServlet {
@@ -25,18 +28,49 @@ public class CustomerController extends HttpServlet {
 		
 		if( uri.equals("/list.cu")) {
 			//고객목록화면 요청
-			//비즈니스 로직
 			command = new CustomerList();
 			command.exec(request, response);
-			
-			//응답화면 연결
 			view = "customer/list.jsp";
+			
 		}else if( uri.equals("/info.cu")) {
 			//선택한 고객정보화면 요청
 			command = new CustomerInfo();
 			command.exec(request, response);
 			view = "customer/info.jsp";
+			
+		}else if( uri.equals("/modify.cu")) {
+			//고객정보수정 화면 요청
+			command = new CustomerInfo();
+			command.exec(request, response);
+			
+			view = "customer/modify.jsp";
+		}else if( uri.equals("/update.cu")) {
+			//변경한 고객정보 저장
+			command = new CustomerUpdate();
+			command.exec(request, response);
+			
+//			view = "customer/info.jsp";
+			view = "info.cu?id="+ request.getParameter("id");
+			redirect = true;
+		}else if( uri.equals("/new.cu")) {
+			// 신규고객 등록화면 요청
+			// 응답화면
+			view = "customer/new.jsp";
+		}else if( uri.equals("/insert.cu")) {
+			// 신규고객정보 저장 요청
+			command = new CustomerInsert();
+			command.exec(request, response);
+			view = "list.cu";
+			redirect = true;
+		}else if( uri.equals("/delete.cu")) {
+			//고객정보 삭제 요청
+			command = new CustomerDelete();
+			command.exec(request, response);
+			view = "list.cu";
+			redirect = true;
 		}
+		
+		
 		
 		// 화면연결 기본은 forward 방식
 		// redirect : DB에 insert, update, delete 요청시

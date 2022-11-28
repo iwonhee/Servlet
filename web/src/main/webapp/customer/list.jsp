@@ -34,6 +34,11 @@
 				</tr>
 				</c:forEach>
 			</table>
+			
+			<div class="btnSet">
+				<button class="btn btn-primary"
+					onclick='location="new.cu"'>신규고객</button>
+			</div>
                     
             </div> <!-- #wrapper -->
         </div> <!-- #page-content-wrapper -->

@@ -39,8 +39,23 @@
         		<td>${dto.phone}</td>
         	</tr>
         </table>
+        
+        <div class='btnSet'>
+        	<button class='btn btn-primary'
+        		onclick='location="modify.cu?id=${dto.id}"'>정보수정</button>
+        	<button class='btn btn-secondary'
+        		onclick='go_delete()'>삭제</button>
+        </div>
+        
             </div> <!-- #wrapper -->
         </div> <!-- #page-content-wrapper -->
     </div> <!-- .container-fluid -->
+    <script>
+    	function go_delete(){
+    		if( confirm('[${dto.name}]고객정보를 삭제하시겠습니까?') ){
+	    		location="delete.cu?id=${dto.id}";    			
+    		}
+    	}
+    </script>
 </body>
 </html>

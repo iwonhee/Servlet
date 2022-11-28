@@ -4,6 +4,24 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="customer">
 	
+	<!-- 선태한 고객정보 삭제 -->
+	<delete id="delete">
+		delete from customer where id = #{id}
+	</delete>
+	
+	<!-- 신규 고객정보 저장 -->
+	<insert id="insert">
+		insert into customer(name, gender, email, phone)
+		values (#{name}, #{gender}, #{email}, #{phone})
+	</insert>
+	
+	<!-- 변경한 고객정보 저장 -->
+	<update id="update">
+		update customer 
+		set name = #{name}, gender = #{gender}, email = #{email}, phone = #{phone} 
+		where id = #{id}
+	</update>
+	
 	<select id="list" resultType='customer.CustomerDTO'>
 		select * from customer
 	</select>
