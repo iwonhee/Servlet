@@ -5,6 +5,6 @@
     <fullyQualifiedTypeName name="command.ProductComCommand"/>
     <fullyQualifiedTypeName name="javax.servlet.Filter"/>
     <fullyQualifiedTypeName name="controller.CustomerController"/>
-    <fullyQualifiedTypeName name="mybatis.HanulFactory"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebFilter"/>
+    <fullyQualifiedTypeName name="mybatis.HanulFactory"/>
 </qualifiedTypeNameHistroy>

@@ -49,6 +49,27 @@ select{
 	margin:0;
 }
 
+.box{
+	width:300px;
+	margin:20px auto;
+	border:1px solid #aaa;
+	padding:30px 40px;
+}
+.box li{margin: 10px 0;}
+
+.box input{
+	width:95%;
+	height:36px;
+	margin-left:5px;
+	margin-right:5px;
+}
+.center{
+	position:absolute;
+	left:50%; top:50%;
+	transform:translate(-50%, -50%);
+}
+
+.mt-4{margin-top:20px;}
 .mr-5{margin-right:20px;}
 
 .w-pct80 { width: 80% }
