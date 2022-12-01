@@ -50,8 +50,9 @@ select{
 }
 
 .box{
-	width:300px;
+	width:320px;
 	margin:20px auto;
+	box-sizing:border-box;
 	border:1px solid #aaa;
 	padding:30px 40px;
 }

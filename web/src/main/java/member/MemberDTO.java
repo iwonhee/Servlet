@@ -2,7 +2,23 @@ package member;
 
 public class MemberDTO {
 	private String userid, userpw, name, gender, email, phone
-				, post, address, birth, admin;
+				, post, address, birth, admin, social, profile_image;
+
+	public String getProfile_image() {
+		return profile_image;
+	}
+
+	public void setProfile_image(String profile_image) {
+		this.profile_image = profile_image;
+	}
+
+	public String getSocial() {
+		return social;
+	}
+
+	public void setSocial(String social) {
+		this.social = social;
+	}
 
 	public String getUserid() {
 		return userid;
